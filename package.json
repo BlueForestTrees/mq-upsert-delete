@@ -1,0 +1,51 @@
+{
+  "name": "mq-upsert-delete",
+  "version": "1.0.1",
+  "description": "receive upsert & delete messages and perform them on mongo collection",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "cross-env DEBUG=api:* DB_COLLECTION=TrunkCollection NAME=trunk nodemon --exec babel-node src/index.js",
+    "test": "cross-env NODE_ENV=development mocha --recursive --require @babel/register --exit \"test/test*.js\"",
+    "build": "rimraf dist && cross-env NODE_ENV=production && babel src --out-dir dist",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueForestTrees/mq-upsert-delete.git"
+  },
+  "keywords": [
+    "rabbit",
+    "mongo"
+  ],
+  "author": "slimee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlueForestTrees/mq-upsert-delete/issues"
+  },
+  "homepage": "https://github.com/BlueForestTrees/mq-upsert-delete#readme",
+  "dependencies": {
+    "simple-rbmq": "1.0.22",
+    "mongo-registry": "1.0.21"
+  },
+  "devDependencies": {
+    "@babel/core": "7.3.4",
+    "@babel/node": "7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/plugin-transform-runtime": "7.3.4",
+    "@babel/polyfill": "7.2.5",
+    "@babel/preset-env": "7.3.4",
+    "@babel/register": "7.0.0",
+    "@babel/runtime": "7.3.4",
+    "cross-env": "5.2.0",
+    "nodemon": "1.18.10"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-syntax-dynamic-import"
+    ]
+  }
+}
