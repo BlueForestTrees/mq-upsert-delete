@@ -1,6 +1,6 @@
 {
   "name": "mq-upsert-delete",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "receive upsert & delete messages and perform them on mongo collection",
   "main": "dist/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/BlueForestTrees/mq-upsert-delete#readme",
   "dependencies": {
-    "simple-rbmq": "1.0.22",
+    "simple-rbmq": "1.0.23",
     "mongo-registry": "1.0.21"
   },
   "devDependencies": {
