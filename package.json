@@ -24,10 +24,11 @@
   },
   "homepage": "https://github.com/BlueForestTrees/mq-upsert-delete#readme",
   "dependencies": {
-    "simple-rbmq": "1.0.23",
-    "mongo-registry": "1.0.21"
+    "mongo-registry": "1.0.21",
+    "simple-rbmq": "1.0.23"
   },
   "devDependencies": {
+    "@babel/cli": "7.2.3",
     "@babel/core": "7.3.4",
     "@babel/node": "7.2.2",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
@@ -37,7 +38,9 @@
     "@babel/register": "7.0.0",
     "@babel/runtime": "7.3.4",
     "cross-env": "5.2.0",
-    "nodemon": "1.18.10"
+    "mocha": "6.0.2",
+    "nodemon": "1.18.10",
+    "rimraf": "2.6.3"
   },
   "babel": {
     "presets": [
