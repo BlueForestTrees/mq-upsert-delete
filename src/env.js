@@ -1,6 +1,8 @@
 import {version} from './../package.json'
 import fs from "fs"
 
+const throwit = message => {throw message}
+
 const ENV = {
     NAME: process.env.NAME || throwit("ENV.NAME pas défini"),
     NODE_ENV: process.env.NODE_ENV || null,
