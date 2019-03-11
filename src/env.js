@@ -24,7 +24,7 @@ ENV.RB = JSON.parse(fs.readFileSync(ENV.RB_PATH, 'utf8'))
 ENV.QUEUE = JSON.parse(fs.readFileSync(ENV.QUEUE_PATH, 'utf8'))
 
 
-const debug = require('debug')(`api:${ENV.NAME}`)
+const debug = require('debug')(`api:mq-${ENV.NAME}`)
 
 debug({ENV})
 

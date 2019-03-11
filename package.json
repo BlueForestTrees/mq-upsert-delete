@@ -4,7 +4,10 @@
   "description": "receive upsert & delete messages and perform them on mongo collection",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "cross-env DEBUG=api:* DB_COLLECTION=TrunkCollection NAME=trunk nodemon --exec babel-node src/index.js",
+    "dev-root": "cross-env DEBUG=api:* DB_COLLECTION=RootCollection NAME=root nodemon --exec babel-node src/index.js",
+    "dev-impact": "cross-env DEBUG=api:* DB_COLLECTION=impactCollection NAME=impact nodemon --exec babel-node src/index.js",
+    "dev-trunk": "cross-env DEBUG=api:* DB_COLLECTION=TrunkCollection NAME=trunk nodemon --exec babel-node src/index.js",
+    "dev-facet": "cross-env DEBUG=api:* DB_COLLECTION=facetCollection NAME=facet nodemon --exec babel-node src/index.js",
     "test": "cross-env NODE_ENV=development mocha --recursive --require @babel/register --exit \"test/test*.js\"",
     "build": "rimraf dist && cross-env NODE_ENV=production && babel src --out-dir dist",
     "start": "node index.js"
