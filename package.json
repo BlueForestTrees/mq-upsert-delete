@@ -1,9 +1,10 @@
 {
   "name": "mq-upsert-delete",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "receive upsert & delete messages and perform them on mongo collection",
   "main": "dist/index.js",
   "scripts": {
+    "dev-info": "cross-env DEBUG=api:* DB_COLLECTION=info NAME=info nodemon --exec babel-node src/index.js",
     "dev-root": "cross-env DEBUG=api:* DB_COLLECTION=RootCollection NAME=root nodemon --exec babel-node src/index.js",
     "dev-impact": "cross-env DEBUG=api:* DB_COLLECTION=impactCollection NAME=impact nodemon --exec babel-node src/index.js",
     "dev-trunk": "cross-env DEBUG=api:* DB_COLLECTION=TrunkCollection NAME=trunk nodemon --exec babel-node src/index.js",
