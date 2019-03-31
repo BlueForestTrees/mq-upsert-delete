@@ -4,6 +4,4 @@ export const upsert = (doc, db) => db.updateOne(
     {upsert: true}
 )
 
-export const del = (doc, db) => db.deleteOne(
-    {_id: doc._id}
-)
+export const del = (doc, db) => db.deleteOne({_id: doc._id})

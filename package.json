@@ -4,6 +4,7 @@
   "description": "receive upsert & delete messages and perform them on mongo collection",
   "main": "dist/index.js",
   "scripts": {
+    "dev-game": "cross-env DEBUG=api:* DB_COLLECTION=games NAME=game nodemon --exec babel-node src/index.js",
     "dev-info": "cross-env DEBUG=api:* DB_COLLECTION=info NAME=info nodemon --exec babel-node src/index.js",
     "dev-root": "cross-env DEBUG=api:* DB_COLLECTION=RootCollection NAME=root nodemon --exec babel-node src/index.js",
     "dev-impact": "cross-env DEBUG=api:* DB_COLLECTION=impactCollection NAME=impact nodemon --exec babel-node src/index.js",
