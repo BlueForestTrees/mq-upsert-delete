@@ -8,6 +8,7 @@
     "dev-info": "cross-env DEBUG=api:* DB_COLLECTION=info NAME=info nodemon --exec babel-node src/index.js",
     "dev-root": "cross-env DEBUG=api:* DB_COLLECTION=RootCollection NAME=root nodemon --exec babel-node src/index.js",
     "dev-impact": "cross-env DEBUG=api:* DB_COLLECTION=impactCollection NAME=impact nodemon --exec babel-node src/index.js",
+    "dev-impactTank": "cross-env DEBUG=api:* DB_COLLECTION=impactTank NAME=impactTank nodemon --exec babel-node src/index.js",
     "dev-trunk": "cross-env DEBUG=api:* DB_COLLECTION=TrunkCollection NAME=trunk nodemon --exec babel-node src/index.js",
     "dev-facet": "cross-env DEBUG=api:* DB_COLLECTION=facetCollection NAME=facet nodemon --exec babel-node src/index.js",
     "test": "cross-env NODE_ENV=development mocha --recursive --require @babel/register --exit \"test/test*.js\"",
